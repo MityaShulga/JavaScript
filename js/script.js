@@ -1,75 +1,443 @@
 "use strict";
-let numberOfFilms;
+// let numberOfFilms;
 
-function start() { 
-    numberOfFilms = +prompt(' сколько фильмов вы просмотрели?', '');
+// function start() {
+//     numberOfFilms = +prompt(' сколько фильмов вы просмотрели?', '');
 
-    while (numberOfFilms =='' || numberOfFilms ==null || isNaN(numberOfFilms)) {
-        numberOfFilms = +prompt(' сколько фильмов вы просмотрели?', '');
-    }
-}
-start();
+//     while (numberOfFilms =='' || numberOfFilms ==null || isNaN(numberOfFilms)) {
+//         numberOfFilms = +prompt(' сколько фильмов вы просмотрели?', '');
+//     }
+// }
+// start();
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
-12
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
 
-function rememberMyfilms() {
-    for (let i = 0; i < 2; i++) {
-    const a = prompt('Один из последних просмотренных фильмов?', ''),
-        b = prompt('оцените его', '');
+
+// function rememberMyfilms() {
+//     for (let i = 0; i < 2; i++) {
+//     const a = prompt('Один из последних просмотренных фильмов?', ''),
+//         b = prompt('оцените его', '');
     
-    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-        personalMovieDB.movies[a] = b;
-        console.log ('done')
-    } else {
-        console.log('error');
-        i--;
-    }
-}
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('done');
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
+// }
     
-}
+// }
 
-rememberMyfilms();
+// rememberMyfilms();
 
-function detectPersonalLevel() { 
-    if (personalMovieDB.count < 10) {
-        console.log("мало фильмов");
-    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-        console.log("отличный зритель");
-    }
-    else if (personalMovieDB.count >= 30) {
-        console.log("киноман");
-    }
-    else {
-    console.log("ERROR"); 
-    }
-}
+// function detectPersonalLevel() {
+//     if (personalMovieDB.count < 10) {
+//         console.log("мало фильмов");
+//     } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+//         console.log("отличный зритель");
+//     }
+//     else if (personalMovieDB.count >= 30) {
+//         console.log("киноман");
+//     }
+//     else {
+//     console.log("ERROR");
+//     }
+// }
 
-detectPersonalLevel();
+// detectPersonalLevel();
 
-function ShowMyDB(hidden) {
-    if (!hidden) {
-        console.log(personalMovieDB);
-    }
+// function ShowMyDB(hidden) {
+//     if (!hidden) {
+//         console.log(personalMovieDB);
+//     }
     
-}
+// }
 
-ShowMyDB(personalMovieDB.privat);
+// ShowMyDB(personalMovieDB.privat);
 
 
-function writeYouGenres() {
-    for (let i = 1; i <= 3; i++){ 
-        personalMovieDB.genres[i - 1] = prompt(`ваш любимый жанр под номером ${i}`);
-    }
-}
+// function writeYouGenres() {
+//     for (let i = 1; i <= 3; i++){
+//         personalMovieDB.genres[i - 1] = prompt(`ваш любимый жанр под номером ${i}`);
+//     }
+// }
 
-writeYouGenres();
+// writeYouGenres();
+
+
+
+
+
+
+////////////////////   MASSIVE ///////////////////////
+
+// const arr = [2, 7, 8, 10, 6];
+// console.log(arr.sort(compreNum));
+
+// function compreNum(a, b) {
+//     return a - b;
+// }
+
+// // arr[99] = 0;
+// // console.log(arr);
+
+// const str = prompt("", "");
+// const product = str.split(", ");
+// product.sort();
+// console.log(product.join('; '));
+
+
+
+
+
+// arr.forEach(function (item, i, arr) {
+//     console.log(`${i}: ${item} vnutri massiva ${arr} `);
+    
+// });
+
+
+
+// arr.push(67);
+// console.log(arr);
+// arr.pop();
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++){
+//     console.log(arr[i]);
+// }
+
+// for (let value of arr) {
+//     console.log(value);
+// }
+
+///////////////////    END MASSIVE   ///////////////////////
+
+
+
+
+
+
+
+
+
+
+///////////////////    TWO OBJECT   ///////////////////////
+
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
+
+// const copy = obj;    /// !!!!!!  SSILKA 
+
+// copy.a = 10;
+
+// console.log(obj);
+// console.log(copy);
+
+// function copy(mainObj) {
+//     let objCopy = {};
+//     let key;
+
+//     for (key in mainObj) {
+//         objCopy[key] = mainObj[key];
+//     }
+
+//     return objCopy;
+// }
+
+// const number = {
+//     a: 2,
+//     b: 5,
+//     c: {
+//         x: 7,
+//         y: 4
+//     }
+// }
+
+// const newNumbers = copy(number);
+
+// newNumbers.b = 10;
+
+
+// console.log(newNumbers);
+// console.log(number);
+
+
+
+// const add = {
+//     d: 17,
+//     e: 20
+// };
+
+// console.log(Object.assign(number, add));
+
+
+// const clone = Object.assign({}, add);
+// clone.d = 20;
+// console.log(add);
+// console.log(clone);
+
+
+
+
+
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();
+
+// newArray[1] = 4;
+// console.log(newArray);
+// console.log(oldArray);
+
+
+// const video = ['youtube', 'vimeo', 'rutube'],
+//     blogs = ['wordpres', 'livejornal', 'blogger'],
+//     internet = [...video, ...blogs, 'vk', 'facebook'];
+
+// console.log(internet);
+
+
+
+
+
+
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+
+// const num = [2, 5, 7];
+
+// log(...num);
+
+
+
+
+
+// const array = ["a", "b"];
+// const newAarray = [...array];
+// const q = {
+//     one: 1,
+//     two: 2
+// };
+
+// const newObj = { ...q }; 
+
+// console.log(newObj);
+
+
+
+
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%'
+//         },
+//         exp: '1 month'
+//     }
+// };
+
+// function showExperience(plan) {
+//     return console.log(personalPlanPeter.skills.exp);
+
+// }
+
+// showExperience();
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+///////////////////   END  TWO OBJECT   ///////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////   OBJECT ///////////////////////
+
+// const option = {
+//     name: 'test',
+//     width: 1024,
+//     height: 1024,
+//     model: {
+//         BMV: 'X5',
+//         Lada: 'kalina'
+//     },
+//     color: {
+//         border: 'black',
+//         bg:' red'
+//     },
+//     makeTest: function () {
+//         console.log("test");
+//     }
+// };
+
+// const { border, bg } = option.color;
+// console.log(bg);
+
+// option.makeTest();
+
+// console.log(Object.keys(option).length);
+
+// console.log(option.name);
+// // delete option.name;
+// console.log(option);
+// let counter = 0;
+// for (let key in option) {
+//     if (typeof (option[key]) === 'object') {
+//         for (let i in option[key]) {
+//             console.log(`${option[key]}-----svoystvo ${i}, imeet znachenie ${option[key][i]}`);
+//             counter++;
+//         }
+//     } else {
+//         console.log(`svoystvo ${key}, imeet znachenie ${option[key]}`);
+//         counter++;
+//     }
+// }
+// console.log(counter);
+
+/////////////////////// END OBJECT /////////////////////////////
+
+
+
+// function calculateVolumeAndArea(length) {
+//     if (typeof(length) !== 'number' || length < 0 || !Number.isInteger(length)) {
+//         return "При вычислении произошла ошибка";
+//     }
+
+//     let volume = 0,
+//         area = 0;
+    
+//     volume = length * length * length;
+//     // length ** 3 - это тоже самое, что и выше или варианты через цикл.
+//     // ** - это оператор степени, напоминаю. Но онлайн редактор его не принимает =/
+//     area = 6 * (length * length);
+
+//     return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+// }
+
+// console.log(calculateVolumeAndArea(6));
+
+// Место для первой задачи
+
+
+
+
+
+// function getTimeFromMinutes(Minutes) {
+// // if (typeof(length) !== 'number' || length < 0 || !Number.isInteger(length)) {
+// //         return "При вычислении произошла ошибка";
+// //     }
+//     let Hour = 0;
+//     let str = '';
+//     Hour = Math.trunc(Minutes / 60);
+//     let Minut = Minutes - (Hour * 60);
+    
+//     return (`Hour - ${Hour}, Minutes - ${Minut}`);
+// }
+
+// console.log(getTimeFromMinutes(0));
+
+// function maxt(a, b, c, d) {
+//     // let maxFour = a;
+//     // if (maxFour < b) {
+//     //     maxFour = b;
+//     // } else if
+//     //     (maxFour < c) {
+//     //     maxFour = c;
+//     // } else if
+//     //     (maxFour < d) {
+//     //     maxFour = d;
+//     // }
+    
+//     return (Math.max(a,b,c,d));
+//     }
+    
+// console.log(maxt(165, 17, -221, 8));
+
+
+
+// function fib(k) {
+//     let arr = [];
+//     arr [0] = 0;
+//     arr [1] = 1;
+//     let str = '0 1';
+//     for (let i = 2; i < k; i++){
+//         arr[i] = arr[i - 2] + arr[i - 1];
+//         str += ` ${arr[i]}`;
+//     }
+//     return (str);
+// }
+// console.log(fib(19));
+
+// function fib2(num) {
+//     if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
+//         return "";
+//     }
+
+//     let result = '';
+//     let first = 0;
+//     let second = 1;
+
+//     for (let i = 0; i < num; i++) {
+//         if (i + 1 === num) {
+//             result += `${first}`;
+//             // Без пробела в конце
+//         } else {
+//             result += `${first} `;
+//         }
+
+//         let third = first + second;
+//         first = second;
+//         second = third;
+//     }
+
+//     return result;
+// }
+
+// fib(5)
+
 
 
 
@@ -114,7 +482,7 @@ writeYouGenres();
 //     arr[1]= Number;
 //     arr[2]= Number + 1;
 
-// return arr;    
+// return arr;
 // }
 // console.log(returnNeighboringNumbers(9));
 
@@ -266,4 +634,179 @@ writeYouGenres();
 
 // console.log(result)
 
-    
+const personalPlanPeter = {
+    name: "Peter",
+    age: "29",
+    skills: {
+        languages: ['ru', 'eng'],
+        programmingLangs: {
+            js: '20%',
+            php: '10%'
+        },
+        exp: '1 month'
+    },
+    showAgeAndLangs: function(plan) {
+        const {age} = plan;
+        const {languages} = plan.skills;
+        let str = `Мне ${age} и я владею языками: `;
+
+        languages.forEach(function(lang) {
+            str += `${lang.toUpperCase()} `;
+        });
+        console.log(str);
+        return str;
+    }
+};
+
+personalPlanPeter.showAgeAndLangs(personalPlanPeter);
+
+
+
+function showProgrammingLangs(plan) {
+    let str = '';
+    const {programmingLangs} = plan.skills;
+    for (let key in programmingLangs) {
+        str += `Язык ${key} изучен на ${programmingLangs[key]}\n`
+    }
+
+    return str;
+}
+showProgrammingLangs(personalPlanPeter);
+
+
+
+
+
+
+// ///////////////////// ///////////////////
+// ///////////////////// ///////////////////
+// let str = '';
+// const mass = [4, 5, 7, 8, 3, 5, 12];
+// for (let i = 0; i < mass.length; i++){
+//     str += `  ${i}--${mass[i]}--${mass}    |`;
+     
+// };
+// mass[14] = 67;
+// for (let value of mass) {
+//     console.log(value);
+// }
+
+// mass.forEach(function(item, i, mass) {
+//     console.log(`${item} - ${i} ---- ${mass}`);
+// });
+// ///////////////////// ///////////////////
+// ///////////////////// ///////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ///////////////////// ///////////////////
+// ///////////////////// ///////////////////
+
+// const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+// function showFamily(arr) {
+//     let str = '';
+
+//     arr.length === 0 ? str = 'Семья пуста' : str = 'Семья состоит из: ';
+
+//     arr.forEach(member => {
+//         str += `${member} `
+//     });
+
+//     return str;
+// }
+
+// console.log(showFamily(family));
+
+// ///////////////////// ///////////////////
+// ///////////////////// ///////////////////
+
+
+
+
+
+// ///////////////////// //////////////////
+// ///////////////////// ///////////////////
+
+// const family=['Peter', 'Ann', 'Alex', 'Linda'];
+// function showFamily(arr) {
+//     let str = `Семья состоит из: `;
+//     if (arr != false || arr.lenght === 0 ) {
+        
+//         for (let i = 0; i < family.length; i++) {
+//             str +=  `${arr[i]} `;
+            
+//         }
+//         return str;
+//     } else  {
+//             str = `Семья пуста`;
+//             return str;
+
+//         }
+//     }
+// console.log(showFamily(family));
+
+// ///////////////////// ///////////////////
+// ///////////////////// ///////////////////
+
+
+
+
+// mass.forEach(function(item, i, mass) {
+//     console.log(`${item} - ${i} ---- ${mass}`);
+// });
+
+
+
+
+
+
+
+// ///////////////////// ///////////////////
+// ///////////////////// ///////////////////
+
+// const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+// let strCity = '';
+// function standardizeStrings(arr) {
+//     for (let i = 0; i < arr.length; i++){
+//        strCity = `${arr.join('\n').toLowerCase()} `;
+        
+//     }
+//     return strCity;
+// }
+
+// console.log(standardizeStrings(favoriteCities));
+
+// ///////////////////// ///////////////////
+// ///////////////////// ///////////////////
+
+
+
+
+
+
+// ///////////////////// ///////////////////
+// ///////////////////// ///////////////////
+
+// const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+// function standardizeStrings(arr) {
+//     arr.forEach(city => {
+//         console.log(city.toLowerCase())
+//     })
+// }
+
+// standardizeStrings(favoriteCities);
+
+// ///////////////////// ///////////////////
+// ///////////////////// ///////////////////
